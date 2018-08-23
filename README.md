@@ -54,8 +54,7 @@
   ```
   gunicorn flask_app:app -w $NUM_WORKER --threads $NUM_THREADS -k $WORKER_CLASS
   ```
-
-## WSGI?
+- [flask-gunicorn 예제](http://egloos.zum.com/mcchae/v/11149241)
 
 ## 참고
 - [gunicorn으로 flask 동시 요청 처리](https://winterj.me/flask-concurrency-test/)

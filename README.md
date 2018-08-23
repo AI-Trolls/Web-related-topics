@@ -35,7 +35,7 @@
     - [웹서버] <-----> [미들웨어] <-----> [파이썬 애플리케이션]
     - mod_wsgi, uwsgi, gunicorn, tornado 등이 있다.
     - Application Container로도 불림
-
+- [Python WSGI의 역사](https://blog.appdynamics.com/engineering/an-introduction-to-python-wsgi-servers-part-1/)
 
 # 파이썬 Production mode 배포 관련
 

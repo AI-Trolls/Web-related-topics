@@ -8,7 +8,8 @@
 - **80번 포트** 리스닝
   - 80번에서 듣고있다가 요청이 들어오면 해석해서 응답
   - CGI라는 것을 통해 앱을 실행시키거나, static filer 리턴
-- **nginx, apache** 서버 등이 있음(최근에는 apache서버도 쓰레드를 이용해 nginx와 비슷한 성능 보인다함)
+- **nginx, apache** 서버 등이 있음
+  - 프로세스 기반의 apache 서버도, 최근에는 쓰레드를 이용해 nginx와 비슷한 성능 보인다함
 
 ## WAS
 - **Web Application Server**

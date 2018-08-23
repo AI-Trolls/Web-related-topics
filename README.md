@@ -27,12 +27,11 @@
 - 웹서버(Nginx)에서 받은 요청에 대한 동적인 처리가 필요한 경우, 
   wsgi가 서버사이드 애플리케이션(flask)을 실행
 - CGI 디자인 패턴에 기반한 인터페이스, **Python**에 종속된 개념
-- CGI 처럼 모든 요청에 대해 sub-process를 fork하지 않음
 - **파이썬 스크립트가 웹 서버와 통신하기 위한 프로토콜**
 - flask, django같은 프레임워크는 여러 요청을 concurrently하게 처리하게끔 설계되지 않음. 
   - **WSGI middleware(server)는 이 부분을 처리함** 
 - 웹서버와 파이썬애플리케이션 사이에 존재하는 개념이라고 생각하면 됨
-  - WSGI middleware
+  - WSGI **middleware**
     - WSGI 요청을 처리하려면 웹 서버에서  정보 및 Callback 함수를 애플리케이션에 제공해야함
     - 애플리케이션은 요청 처리 후 응답을 Callback을 통해 처리
     - WSGI middleware란 놈이 이러한 작업들을 처리해줌

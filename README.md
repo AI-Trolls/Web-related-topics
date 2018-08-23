@@ -23,6 +23,9 @@
 - 근래에는 인터프리터를 웹서버 자체에 내장시켜 따로 프로세스를 fork시키지 않고 내부에서 처리하기도 함
 
 ## WSGI
+- **Web Server Gateway Interface**의 약자
+- 웹서버(Nginx)에서 받은 요청에 대한 동적인 처리가 필요한 경우, 
+  wsgi가 서버사이드 애플리케이션(flask)을 실행
 - CGI 디자인 패턴에 기반한 인터페이스, **Python**에 종속된 개념
 - CGI 처럼 모든 요청에 대해 sub-process를 fork하지 않음
 - **파이썬 스크립트가 웹 서버와 통신하기 위한 프로토콜**
@@ -35,7 +38,7 @@
     - WSGI middleware란 놈이 이러한 작업들을 처리해줌
     - 이 미들웨어는, 웹서버의 관점에서는 애플리케이션이고, 파이썬 애플리케이션 관점에선 서버로서 행동
     - 관계 : [웹서버] <-----> [미들웨어] <-----> [파이썬 애플리케이션]
-    - mod_wsgi, uwsgi, gunicorn, tornado 등이 있다.
+    - WSGI 규격에 맞춘 코드를 실행해주는 프로그램으로는 uWSGI, gunicorn 등이 있음 
     - Application Container로도 불림
 - [Python WSGI의 역사 및 개념](https://blog.appdynamics.com/engineering/an-introduction-to-python-wsgi-servers-part-1/)
 
@@ -53,10 +56,6 @@
   ```
 
 ## WSGI?
-- **Web Server Gateway Interface**의 약자
-- 웹서버(Nginx)에서 받은 요청에 대한 동적인 처리가 필요한 경우, 
-  wsgi가 서버사이드 애플리케이션(flask)을 실행
-- WSGI 규격에 맞춘 코드를 실행해주는 프로그램으로는 uWSGI, gunicorn 등이 있음 (똑같이 pip으로 설치하여 사용)
 
 ## 참고
 - [gunicorn으로 flask 동시 요청 처리](https://winterj.me/flask-concurrency-test/)

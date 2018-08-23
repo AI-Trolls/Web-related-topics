@@ -1,8 +1,23 @@
 # 웹 관련 토픽
 
-## Nginx
-- 웹서버
-- 원칙적으로 Static한 파일만을 클라이언트에게 리턴해주는 역할
+웹서버 및 자주쓰는 flask, node에 관한 개념, 용어들, 배포시 알아둬야할 점들 정리
+
+## Web Server
+- 클라이언트로부터 요청된 웹 리소스을 서빙해주는 소프트웨어
+- 기본적으로 정적(static)한 자원을 그대로 리턴해주는 역할
+- 80번 포트
+- **nginx, apache** 서버 등이 있음(최근에는 apache서버도 쓰레드를 이용해 nginx와 비슷한 성능 보인다함)
+
+## CGI
+- Common Gateway Interface
+- 정적(static)인 웹 서버에서 앱(dynamic)을 작동시키기 위한 인터페이스
+- 웹 서버와 외부 애플리케이션 사이의 인터페이스가 **CGI**
+- 기존에는 요청이 들어오면 CGI를 통해 외부 프로그램을 실행(fork)시켜 응답을 했지만
+- 근래에는 인터프리터를 웹서버 자체에 내장시켜 따로 프로세스를 fork시키지 않고 내부에서 처리한다고 함.
+
+## WAS
+- Web Application Server
+- 웹 서버 뒤에 붙는 애플리케이션 서버(flask, node, rails...)
 
 # 파이썬 Production mode 배포 관련
 
@@ -19,10 +34,11 @@
 ## WSGI?
 - **Web Server Gateway Interface**의 약자
 - 웹서버(Nginx)에서 받은 요청에 대한 동적인 처리가 필요한 경우, 
-  wsgi가 서버사이드 애플리케이션을 실행
+  wsgi가 서버사이드 애플리케이션(flask)을 실행
 - WSGI 규격에 맞춘 코드를 실행해주는 프로그램으로는 uWSGI, gunicorn 등이 있음 (똑같이 pip으로 설치하여 사용)
 
 ## 참고
 - [gunicorn으로 flask 동시 요청 처리](https://winterj.me/flask-concurrency-test/)
 - [uwsgi를 통한 python3, nginx 배포](https://mango-tree.github.io/2017/03/27/uWSGI-%EC%99%80-Python3%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-Nginx%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0/)
 - [uwsgi를 통한 flask, nginx 배포](https://cjh5414.github.io/flask-uwsgi-nginx/)
+- [웹서버, WAS, CGI 개념](http://khanrc.tistory.com/entry/%EC%9B%B9%EC%84%9C%EB%B2%84-WAS-CGI) 

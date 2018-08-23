@@ -28,7 +28,8 @@
 - **파이썬 스크립트가 웹 서버와 통신하기 위한 프로토콜**
 - 웹서버와 파이썬애플리케이션 사이에 존재하는 개념이라고 생각하면 됨
   - WSGI middleware
-    - WSGI 요청을 처리하려면 웹 서버에서 환경 정보 및 Callback 함수를 애플리케이션에 제공해야함
+    - The server executes the web app and sends related information and a callback function to the app. The request is processed on the app side, and a response is sent back to the server utilizing the callback function
+    - WSGI 요청을 처리하려면 웹 서버에서  정보 및 Callback 함수를 애플리케이션에 제공해야함
     - 애플리케이션은 요청 처리 후 응답을 Callback을 통해 처리
     - WSGI middleware란 놈이 이러한 작업들을 처리해줌
     - 웹서버의 관점에서는 애플리케이션이고, 파이썬 애플리케이션 관점에선 서버로서 행동

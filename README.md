@@ -51,9 +51,8 @@
   - 따라서 flask 앱 내부에서 IO작업(request, file i/o)를 할 때 주의해야함
 - flask 앱은 기본적으로 *Synchronous*하다.
   - **gunicorn**을 통해서 여러 요청의 동시 처리를 가능케할 수 있다.
-  ```
-  gunicorn flask_app:app -w $NUM_WORKER --threads $NUM_THREADS -k $WORKER_CLASS
-  ```
+  - 필요에따라 지정한 만큼 인스턴스를 몇개 만들어 동시 서비스를 제공(workers)하게끔 동작한다.
+  - [gunicorn](http://gunicorn.org)
 - [flask-gunicorn 예제](http://egloos.zum.com/mcchae/v/11149241)
 
 ## 참고

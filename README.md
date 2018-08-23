@@ -22,7 +22,7 @@
   - 모든 요청마다 sub-process fork
 - 근래에는 인터프리터를 웹서버 자체에 내장시켜 따로 프로세스를 fork시키지 않고 내부에서 처리한다고 함.
 
-# WSGI
+## WSGI
 - CGI 디자인 패턴에 기반한 인터페이스, **Python**에 종속된 개념
 - CGI 처럼 모든 요청에 대해 sub-process를 fork하지 않음
 - 파이썬 스크립트가 웹 서버와 통신하기 위한 프로토콜
@@ -35,6 +35,7 @@
     - [웹서버] ----- [미들웨어] ----- [파이썬 애플리케이션]
     - mod_wsgi, uwsgi, gunicorn, tornado 등이 있다.
     - Application Container로도 불림
+
 
 # 파이썬 Production mode 배포 관련
 

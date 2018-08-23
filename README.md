@@ -38,9 +38,7 @@
     - mod_wsgi, uwsgi, gunicorn, tornado 등이 있다.
     - Application Container로도 불림
 - [Python WSGI의 역사 및 개념](https://blog.appdynamics.com/engineering/an-introduction-to-python-wsgi-servers-part-1/)
-- WSGI가 필요한 이유 보충
-  - 여러 요청을 concurrently하게 처리하게끔 설계됨 (flask같은 framework들은 여기에 신경을 안씀)
-  - 
+
 
 # 파이썬 Production mode 배포 관련
 

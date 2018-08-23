@@ -26,6 +26,8 @@
 - CGI 디자인 패턴에 기반한 인터페이스, **Python**에 종속된 개념
 - CGI 처럼 모든 요청에 대해 sub-process를 fork하지 않음
 - **파이썬 스크립트가 웹 서버와 통신하기 위한 프로토콜**
+- flask, django같은 프레임워크는 여러 요청을 concurrently하게 처리하게끔 설계되지 않음. 
+  - **WSGI middleware(server)는 이 부분을 처리함** 
 - 웹서버와 파이썬애플리케이션 사이에 존재하는 개념이라고 생각하면 됨
   - WSGI middleware
     - WSGI 요청을 처리하려면 웹 서버에서  정보 및 Callback 함수를 애플리케이션에 제공해야함
@@ -36,6 +38,9 @@
     - mod_wsgi, uwsgi, gunicorn, tornado 등이 있다.
     - Application Container로도 불림
 - [Python WSGI의 역사 및 개념](https://blog.appdynamics.com/engineering/an-introduction-to-python-wsgi-servers-part-1/)
+- WSGI가 필요한 이유 보충
+  - 여러 요청을 concurrently하게 처리하게끔 설계됨 (flask같은 framework들은 여기에 신경을 안씀)
+  - 
 
 # 파이썬 Production mode 배포 관련
 

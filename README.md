@@ -37,7 +37,7 @@
     - 애플리케이션은 요청 처리 후 응답을 Callback을 통해 처리
     - WSGI middleware란 놈이 이러한 작업들을 처리해줌
     - 이 미들웨어는, 웹서버의 관점에서는 애플리케이션이고, 파이썬 애플리케이션 관점에선 서버로서 행동
-    - 관계 : [웹서버] <-----> [미들웨어] <-----> [파이썬 애플리케이션]
+    - 관계 : [웹서버] **<----->** [미들웨어] **<----->** [파이썬 애플리케이션]
     - WSGI 규격에 맞춘 코드를 실행해주는 프로그램으로는 uWSGI, gunicorn 등이 있음 
     - Application Container로도 불림
 - [Python WSGI의 역사 및 개념](https://blog.appdynamics.com/engineering/an-introduction-to-python-wsgi-servers-part-1/)

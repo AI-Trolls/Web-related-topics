@@ -72,7 +72,7 @@ server { # 하나의 웹사이트 선언
       - 이런 패턴은 웹서버 뒤에 WAS(웹애플리케이션서버)가 있어서,  
         요청을 받은 웹서버가 WAS로 요청을 넘길 때 씁니다.
 
-## "Serving Static Content"
+## "Serving Static Content"은 어떤 과정을 거쳐 처리되는가?
 ```
   http { # 생략 가능한 듯
     server {
@@ -85,7 +85,7 @@ server { # 하나의 웹사이트 선언
   1. 일단 어떤 server block으로 요청을 처리시킬지 결정하게 되면,
   2. 그 안에 있는 location 지시어를 참조해 URI 매칭을 시도하는 식으로 흘러갑니다!
 
-## location directive
+## location directive 사용법
 - Server block 안에서 URI 매칭을 하는 친구
 ```
 server {
@@ -106,8 +106,7 @@ cf) /images/로 시작 안되는 것들은 모두 /data/www/로 매핑
   - ex) http://localhost/some/example.png 는 **/data/www/some/example.png**로 바뀜 
 ```
 
-
-## Virtual Host, Sub Domain
+## Virtual Host, Sub Domain 설정법
 - 하나의 서버 안에 2개의 웹사이트를 선언?
 - conf 파일에 server 블록 자체를 별도로 추가하면 가능합니다. 
 ```

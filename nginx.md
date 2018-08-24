@@ -31,7 +31,7 @@ nginx 공홈의 beginner's guide위주로 정리
 - tail 명령어로 찍어보는 식으로 활용합니다
 
 ## Directives
-- nginx는 **directives에 의해 컨트롤되는 모듈**로 이루어져있습니다.
+- nginx는 **directives(지시어)에 의해 컨트롤되는 모듈**로 이루어져있습니다.
 - directive의 형식에는 두 가지가 있습니다.
   - **simple** directive
     ```
@@ -81,9 +81,12 @@ server { # 하나의 웹사이트 선언
   }
 ```
 - 일반적으로 conf는 여러 server block으로 이루어져있고,
-- server block은 listen하고 있는 port와 server name에 의해 구분됩니다.
+- server block은 **listen하고 있는 port와 server name**에 의해 구분됩니다.
   1. 일단 어떤 server block으로 요청을 처리시킬지 결정하게 되면,
-  2. 그 안에 있는 location 지시어를 참조해 URI 매칭을 시도하는 식으로 흘러갑니다.
+  2. 그 안에 있는 location 지시어를 참조해 URI 매칭을 시도하는 식으로 흘러갑니다!
+
+## location directive
+
 
 
 ## Virtual Host, Sub Domain

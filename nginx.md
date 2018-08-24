@@ -130,14 +130,38 @@ server {
 }
 ```
 
-## 용어 정리
-
-### Proxy Server ?
+## Proxy Server ?
 - 클라이언트를 자신을 통해서 다른 네트워크 서비스로 중계해주는 소프트웨어
+  - Receive requests and pass them to the proxied servers
+  - Retrieves responses from them and send them to the client
 - Proxy Server를 둠으로써 뒤에 분산 시스템을 숨길 수 있음
-- "revere proxy"로 부르기도
+- "Revere Proxy"로 부르기도
+```
+server {
+  listen 8080;
+  root /data/up1; # maps all requests to the /data/up1 (local file system)
+                  # server의 context 속에 위치할 수도 있음 (location에 root 지시어가 따로 없다면)
+  location / {
+    ~~~  
+  }
+}
+server {
+  location / {
+    proxy_pass http://localhost:8080;
+  }
+  location ~ \.(gif|jpg|png)$ {
+    root /data/images;
+  }
+}
+```
+- regex는 ~로 시작한다.(좌우에 띄워줘야 하는 듯)
+- 두번째 location에 나온 패턴은
+  - filter requests ending with .gif, .jpg, .png and map them to /data/images/ directory
+    by adding URI to the root directive param
+- 그 외의 패턴은 모두 8080(proxied server)으로 pass된다.
 
-### Upstream ?
+
+## Upstream ?
 - Origin 서버
   - 여러 대의 컴퓨터가 순차적으로 어떤 일을 할 때, 어떤 서비스를 받는 서버를 의미한다.
 - Nginx 자체는 Down Stream 서버라고 한다.

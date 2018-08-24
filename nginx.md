@@ -64,7 +64,7 @@ server { # 하나의 웹사이트 선언
 ```
 - 대충 이런식으로 생겨 먹었습니다.
   - **server** 블록은 **하나의 웹사이트를 선언**할 때 쓰입니다.
-  - **location** 블록은 server 블록 안에 등장하고, **특정 URL을 처리하는 법을 정의** 합니다.
+  - **location** 블록은 server 블록 안에 등장하고, **특정 URL을 처리하는 법을 정의** 합니다. (뒤에서 자세히 설명)
     - 위 예시에선 루트(/)로 접속 했을 때, 
       /home/nginx에 있는 index.html을 서빙하는 의미겠죠?
     - 두 번째 location 블록은 특정 패턴을 명시하고 있습니다.  
@@ -86,7 +86,25 @@ server { # 하나의 웹사이트 선언
   2. 그 안에 있는 location 지시어를 참조해 URI 매칭을 시도하는 식으로 흘러갑니다!
 
 ## location directive
-
+- Server block 안에서 URI 매칭을 하는 친구
+```
+server {
+  location / {
+    root /data/www;
+  }
+  
+  location /images/ {
+    root /data;
+  }
+}
+1. URI가 / 와 매칭된다면, root에 명시된 주소와 URI를 합칩니다.
+  - 만약 매칭 후보가 여럿이라면 가장 긴 prefix에 해당하는 놈을 고릅니다.
+2. /images/로 시작하는 URI라면
+   서버는 /data/images 디렉터리로 부터 파일을 전송합니다. (없으면 404 status code)
+  - ex) http://localhost/images/example.png 는 **/data/images/example.png**로 바뀜
+cf) /images/로 시작 안되는 것들은 모두 /data/www/로 매핑
+  - ex) http://localhost/some/example.png 는 **/data/www/some/example.png**로 바뀜 
+```
 
 
 ## Virtual Host, Sub Domain

@@ -162,8 +162,8 @@ server {
 - **When Nginx select a location block to server a request...**
   1. checks location directives param & remember the longest prefix
   2. checks regex
-    - if there is mached one -> pick that location
-    - else, pick remembered one
+      - if there is mached one -> pick that location
+      - else, pick remembered one
 
 ## Upstream ?
 - Origin 서버

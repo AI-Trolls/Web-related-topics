@@ -4,7 +4,7 @@ conf 파일에 들어가는 기본적인 문법(?) block들의 기초적인 사�
 nginx 공홈의 beginner's guide위주로 정리  
 
 ## Nginx
-- Reactor 패턴
+- **Reactor** 패턴
   - 하나는 Event를 받고 전달해 주는 리액터
   - 다른 하나는 리액터가 보낸 Event를 실제로 받아 처리하는 핸들러
 - 기본적으로 single thread를 이용해서, 몇 천개의 connection도 효율적으로 관리가 가능하다고 함
@@ -58,10 +58,22 @@ server {
 }
 ```
 
+## 용어 정리
 
+### Proxy Server ?
+- 클라이언트를 자신을 통해서 다른 네트워크 서비스로 중계해주는 소프트웨어
+- Proxy Server를 둠으로써 뒤에 분산 시스템을 숨길 수 있음
+- "revere proxy"로 부르기도
+
+### Upstream ?
+- Origin 서버
+  - 여러 대의 컴퓨터가 순차적으로 어떤 일을 할 때, 어떤 서비스를 받는 서버를 의미한다.
+- Nginx 자체는 Down Stream 서버라고 한다.
+- **upstream은 nginx의 내장모듈**로서, **부하 분산(로드 밸런싱) 및 속도 개선**에 쓰인다. 사용법도 매우 간단데스
 
 # 참고
 - [nginx beginner's guide](http://nginx.org/en/docs/beginners_guide.html)
 - [nginx 주요 설정 / 필독](https://sarc.io/index.php/nginx/61-nginx-nginx-conf)
 - [nginx 공홈에서 공개한 쿡북 / 매우 유용](https://www.nginx.com/resources/library/complete-nginx-cookbook/)
   - speed up options ; 4page, reset_timeout_connections on; 및 gzip 사용..
+- [생활 코딩 nginx / 걍 참고용](https://opentutorials.org/module/384/3463)

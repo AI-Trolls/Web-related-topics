@@ -17,6 +17,7 @@ nginx 공홈의 beginner's guide위주로 정리
 
 ## Command
 - stop, quit, reload, reopen 등이 있음
+- 이놈들을 이용해서 nginx 자체를 키고 끄고 conf를 리로드하는 등의 컨트롤을 할 수 있습니다.
 ```
   nginx -s 커멘드
 ```
@@ -30,8 +31,8 @@ nginx 공홈의 beginner's guide위주로 정리
 - access.log, error.log가 있을 것인데
 - tail 명령어로 찍어보는 식으로 활용합니다
 
-## Directives
-- nginx는 **directives(지시어)에 의해 컨트롤되는 모듈**로 이루어져있습니다.
+## Directives(지시어)
+- nginx는 **directives에 의해 컨트롤되는 모듈**로 이루어져있습니다.
 - directive의 형식에는 두 가지가 있습니다.
   - **simple** directive
     ```

@@ -114,6 +114,7 @@ server {
 2. /images/로 시작하는 URI라면
    서버는 /data/images 디렉터리로 부터 파일을 전송합니다. (없으면 404 status code)
     - ex) http://localhost/images/example.png 는 **/data/images/example.png**로 바뀜
+
 cf) /images/로 시작 안되는 것들은 모두 /data/www/로 매핑
   - ex) http://localhost/some/example.png 는 **/data/www/some/example.png**로 바뀜 
 

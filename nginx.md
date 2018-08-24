@@ -8,8 +8,22 @@ nginx 공홈의 beginner's guide위주로 정리
 ## conf 파일
 - 저는 보통 /etc/nginx/site-availables/default 파일을 수정함으로써 Nginx 세팅을 합니다
 
-## 
-
+## Block
+- conf 파일을 이루는 요소들을 블록이라 불렀던 것 같음
+```
+server {
+  listen 80;
+  server_name www.xxx.com
+  location / {
+    root /home/nginx;
+    index index.html, index.htm;
+  }
+  location ~ \.do$ {
+    proxy_pass http://localhost:8080;
+  }
+}
+```
+- 대충 이런식으로 생겨 먹었습니다.
 
 # 참고
 - [nginx beginner's guide](http://nginx.org/en/docs/beginners_guide.html)

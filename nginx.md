@@ -23,7 +23,7 @@ nginx 공홈의 beginner's guide위주로 정리
 ```
 
 ## Conf 파일
-- 저는 보통 /etc/nginx/site-availables/default 파일을 수정함으로써 Nginx 세팅을 합니다
+- 저는 보통 /etc/nginx/site-availables/default 파일을 수정함으로써 Nginx 세팅을 합니다</br>
   (/etc/nginx/conf.d/default.conf 인 경우도 있음)
 - nginx가 설치되면 자동으로 생성됨
 

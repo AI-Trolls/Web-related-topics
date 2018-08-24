@@ -110,10 +110,10 @@ server {
 }
 ```
 1. URI가 / 와 매칭된다면, root에 명시된 주소와 URI를 합칩니다.
-  - 만약 매칭 후보가 여럿이라면 가장 긴 prefix에 해당하는 놈을 고릅니다.
+    - 만약 매칭 후보가 여럿이라면 가장 긴 prefix에 해당하는 놈을 고릅니다.
 2. /images/로 시작하는 URI라면
    서버는 /data/images 디렉터리로 부터 파일을 전송합니다. (없으면 404 status code)
-  - ex) http://localhost/images/example.png 는 **/data/images/example.png**로 바뀜
+    - ex) http://localhost/images/example.png 는 **/data/images/example.png**로 바뀜
 cf) /images/로 시작 안되는 것들은 모두 /data/www/로 매핑
   - ex) http://localhost/some/example.png 는 **/data/www/some/example.png**로 바뀜 
 

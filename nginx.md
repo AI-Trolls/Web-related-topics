@@ -74,6 +74,7 @@ server { # 하나의 웹사이트 선언
         요청을 받은 웹서버가 WAS로 요청을 넘길 때 씁니다.
 
 ## "Serving Static Content"은 어떤 과정을 거쳐 처리되는가?
+- nginx는 웹서버로 static content(html, css, image, ...)를 서빙하는 용도의 소프트웨어입니다.
 ```
   http { # 생략 가능한 듯
     server {

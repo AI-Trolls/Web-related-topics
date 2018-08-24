@@ -29,7 +29,7 @@ nginx 공홈의 beginner's guide위주로 정리
 ## Log 파일
 - 아마 /log/nginx에 보면
 - access.log, error.log가 있을 것인데
-- tail 명령어로 찍어보는 식으로 활용합니다
+- tail -f 명령어로 실시간 로그를 찍어보는 식으로 활용합니다
 
 ## Directives(지시어)
 - nginx는 **directives에 의해 컨트롤되는 모듈**로 이루어져있습니다.

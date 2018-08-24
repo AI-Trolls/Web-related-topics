@@ -15,17 +15,17 @@ nginx 공홈의 beginner's guide위주로 정리
 
 ## 설치는 알아서
 
-## 커멘드
+## Command
 - stop, quit, reload, reopen 등이 있음
 ```
   nginx -s 커멘드
 ```
 
-## conf 파일
+## Conf 파일
 - 저는 보통 /etc/nginx/site-availables/default 파일을 수정함으로써 Nginx 세팅을 합니다
 - nginx가 설치되면 자동으로 생성됨
 
-## log 파일
+## Log 파일
 - 아마 /log/nginx에 보면
 - access.log, error.log가 있을 것인데
 - tail 명령어로 찍어보는 식으로 활용합니다
@@ -71,6 +71,20 @@ server { # 하나의 웹사이트 선언
       '.do'로 끝나는 주소 요청은 로컬호스트의 8080포트로 넘어갑니다.
       - 이런 패턴은 웹서버 뒤에 WAS(웹애플리케이션서버)가 있어서,  
         요청을 받은 웹서버가 WAS로 요청을 넘길 때 씁니다.
+
+## "Serving Static Content"
+```
+  http { # 생략 가능한 듯
+    server {
+    
+    }
+  }
+```
+- 일반적으로 conf는 여러 server block으로 이루어져있고,
+- server block은 listen하고 있는 port와 server name에 의해 구분됩니다.
+  1. 일단 어떤 server block으로 요청을 처리시킬지 결정하게 되면,
+  2. 그 안에 있는 location 지시어를 참조해 URI 매칭을 시도하는 식으로 흘러갑니다.
+
 
 ## Virtual Host, Sub Domain
 - 하나의 서버 안에 2개의 웹사이트를 선언?

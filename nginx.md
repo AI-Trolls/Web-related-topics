@@ -130,7 +130,7 @@ server {
 }
 ```
 
-## Proxy Server ?
+## Proxy Server 설정법
 - 클라이언트를 자신을 통해서 다른 네트워크 서비스로 중계해주는 소프트웨어
   - Receive requests and pass them to the proxied servers
   - Retrieves responses from them and send them to the client

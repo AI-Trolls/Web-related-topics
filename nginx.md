@@ -43,7 +43,7 @@ nginx 공홈의 beginner's guide위주로 정리
       ~~~
     }
     ```
-  - 만약 block directive의 { } 안에 다른 directive가 있다면 block을 **context**라고도 부르기도 합니다.
+  - 만약 block directive의 { } 안에 다른 directive가 있다면 block을 안에 있는 놈들의 **context**라고도 부르기도 합니다.
   - 참고로, 어디에도 포함되지 않은 directive는 main context에 포함되었다고 말합니다.
 
 ## Conf 기본 예시

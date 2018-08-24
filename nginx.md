@@ -97,6 +97,7 @@ server { # 하나의 웹사이트 선언
 
 ## location directive 사용법
 - Server block 안에서 URI 매칭을 하는 친구
+- 주소 매칭을 할 때, 당연히 regular expression도 쓸 수 있습니다. (알아서 찾아보기 - 나도 헷갈림)
 ```
 server {
   location / {
@@ -107,6 +108,7 @@ server {
     root /data;
   }
 }
+```
 1. URI가 / 와 매칭된다면, root에 명시된 주소와 URI를 합칩니다.
   - 만약 매칭 후보가 여럿이라면 가장 긴 prefix에 해당하는 놈을 고릅니다.
 2. /images/로 시작하는 URI라면
@@ -114,7 +116,6 @@ server {
   - ex) http://localhost/images/example.png 는 **/data/images/example.png**로 바뀜
 cf) /images/로 시작 안되는 것들은 모두 /data/www/로 매핑
   - ex) http://localhost/some/example.png 는 **/data/www/some/example.png**로 바뀜 
-```
 
 ## Virtual Host, Sub Domain 설정법
 - 하나의 서버 안에 2개의 웹사이트를 선언?

@@ -7,11 +7,19 @@ nginx 공홈의 beginner's guide위주로 정리
 - **Reactor** 패턴
   - 하나는 Event를 받고 전달해 주는 리액터
   - 다른 하나는 리액터가 보낸 Event를 실제로 받아 처리하는 핸들러
+- one master process(conf, worker 관리)
+- several worker processes (실제 요청 처리)
 - 기본적으로 single thread를 이용해서, 몇 천개의 connection도 효율적으로 관리가 가능하다고 함
-- 필요에 따라 fork를 써서 몇 개의 process 사용 가능
+  - 필요에 따라 fork를 써서 몇 개의 process 사용 가능
 - Main Event Loop라는 놈이 OS의 socket으로 부터 읽을 수 있는 Data를 기다리고 있음
 
 ## 설치는 알아서
+
+## 커멘드
+- stop, quit, reload, reopen 등이 있음
+```
+  nginx -s 커멘드
+```
 
 ## conf 파일
 - 저는 보통 /etc/nginx/site-availables/default 파일을 수정함으로써 Nginx 세팅을 합니다
@@ -22,8 +30,20 @@ nginx 공홈의 beginner's guide위주로 정리
 - access.log, error.log가 있을 것인데
 - tail 명령어로 찍어보는 식으로 활용합니다
 
-## Block
-- conf 파일을 이루는 요소들을 블록이라 부릅니다.
+## Directives
+- nginx는 **directives에 의해 컨트롤되는 모듈**로 이루어져있습니다.
+- directive의 형식에는 두 가지가 있습니다.
+  - **simple** directive
+    ```
+    directive_name params
+    ```
+  - **block** directive
+    ```
+    directive_name {
+      ~~~
+    }
+    ```
+  - 만약 block directive의 { } 안에 다른 directive가 있다면 block을 **context**라고도 부르기도 합니다.
 ```
 server { # 하나의 웹사이트 선언
   listen 80; # 리스닝 포트
@@ -42,8 +62,10 @@ server { # 하나의 웹사이트 선언
 - 대충 이런식으로 생겨 먹었습니다.
   - **server** 블록은 **하나의 웹사이트를 선언**할 때 쓰입니다.
   - **location** 블록은 server 블록 안에 등장하고, **특정 URL을 처리하는 법을 정의** 합니다.
-    - 위 예시에선 루트(/)로 접속 했을 때, /home/nginx에 있는 index.html을 서빙하는 의미겠죠?
-    - 두 번째 location 블록은 특정 패턴을 명시하고 있습니다. '.do'로 끝나는 주소 요청은 로컬호스트의8080 으로 넘어갑니다.
+    - 위 예시에선 루트(/)로 접속 했을 때, 
+      /home/nginx에 있는 index.html을 서빙하는 의미겠죠?
+    - 두 번째 location 블록은 특정 패턴을 명시하고 있습니다.  
+      '.do'로 끝나는 주소 요청은 로컬호스트의 8080포트로 넘어갑니다.
       - 이런 패턴은 웹서버 뒤에 WAS(웹애플리케이션서버)가 있어서,  
         요청을 받은 웹서버가 WAS로 요청을 넘길 때 씁니다.
 

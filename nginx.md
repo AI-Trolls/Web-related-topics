@@ -12,18 +12,24 @@ nginx 공홈의 beginner's guide위주로 정리
 - conf 파일을 이루는 요소들을 블록이라 불렀던 것 같음
 ```
 server {
-  listen 80;
-  server_name www.xxx.com
+  listen 80; # 리스닝 포트
+  server_name www.xxx.com;
   location / {
-    root /home/nginx;
-    index index.html, index.htm;
+    root /home/nginx; 
+    index index.html, index.htm; # 초기 페이지 설정
   }
   location ~ \.do$ {
-    proxy_pass http://localhost:8080;
+    proxy_pass http://localhost:8080; # 
   }
 }
 ```
 - 대충 이런식으로 생겨 먹었습니다.
+  - **server** 블록은 <u>하나의 웹사이트를 선언</u>할 때 쓰입니다.
+  - **location** 블록은 server 블록 안에 등장하고, <u>특정 URL을 처리하는 법을 정의</u> 합니다.
+    - 위 예시에선 루트(/)로 접속 했을 때, /home/nginx에 있는 index.html을 서빙하는 의미겠죠?
+    - 두 번째 location 블록은 특정 패턴을 명시하고 있습니다. '.do'로 끝나는 주소 요청은 로컬호스트의8080 으로 넘어갑니다.
+      - 이런 패턴은 웹서버 뒤에 웹애플리케이션 서버가 있어서, 요청을 넘길 때 씁니다.
+  - 
 
 # 참고
 - [nginx beginner's guide](http://nginx.org/en/docs/beginners_guide.html)

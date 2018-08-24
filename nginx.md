@@ -7,8 +7,8 @@ nginx 공홈의 beginner's guide위주로 정리
 - **Reactor** 패턴
   - 하나는 Event를 받고 전달해 주는 리액터
   - 다른 하나는 리액터가 보낸 Event를 실제로 받아 처리하는 핸들러
-- one master process(conf, worker 관리)
-- several worker processes (실제 요청 처리)
+  - one master process(conf, worker 관리)
+  - several worker processes (실제 요청 처리)
 - 기본적으로 single thread를 이용해서, 몇 천개의 connection도 효율적으로 관리가 가능하다고 함
   - 필요에 따라 fork를 써서 몇 개의 process 사용 가능
 - Main Event Loop라는 놈이 OS의 socket으로 부터 읽을 수 있는 Data를 기다리고 있음

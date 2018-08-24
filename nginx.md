@@ -142,7 +142,6 @@ server {
   root /data/up1; # maps all requests to the /data/up1 (local file system)
                   # server의 context 속에 위치할 수도 있음 (location에 root 지시어가 따로 없다면)
   location / {
-    ~~~  
   }
 }
 server {
@@ -160,6 +159,11 @@ server {
     by adding URI to the root directive param
 - 그 외의 패턴은 모두 8080(proxied server)으로 pass된다.
 
+- **When Nginx select a location block to server a request...**
+  1. checks location directives param & remember the longest prefix
+  2. checks regex
+    - if there is mached one -> pick that location
+    - else, pick remembered one
 
 ## Upstream ?
 - Origin 서버

@@ -159,6 +159,7 @@ server {
     by adding URI to the root directive param
 - 그 외의 패턴은 모두 8080(proxied server)으로 pass된다.
 
+- nginx가 location블락을 선택하는 기준은 다음과 같다.
 - **When Nginx select a location block to server a request...**
   1. checks location directives param & remember the longest prefix
   2. checks regex

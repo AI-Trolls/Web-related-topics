@@ -66,3 +66,7 @@
 - [웹서버, WAS, CGI 개념](http://khanrc.tistory.com/entry/%EC%9B%B9%EC%84%9C%EB%B2%84-WAS-CGI) 
 - [WSGI로 보는 웹 서버 개념](http://khanrc.tistory.com/entry/WSGI%EB%A1%9C-%EB%B3%B4%EB%8A%94-%EC%9B%B9-%EC%84%9C%EB%B2%84%EC%9D%98-%EA%B0%9C%EB%85%90)
 - [WSGI와 CGI의 차이](http://khanrc.tistory.com/entry/WSGI%EC%99%80-CGI%EC%9D%98-%EC%B0%A8%EC%9D%B4)
+
+
+# 노드 관련 토픽
+- .mongoose를 이용한 mongoDB 사용법 ; https://velopert.com/594

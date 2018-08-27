@@ -58,6 +58,7 @@
   - [gunicorn](http://gunicorn.org)
   - [supervisor](http://supervisord.org/index.html) ; node의 forever같은 것
 - [flask-gunicorn 예제](http://egloos.zum.com/mcchae/v/11149241)
+- [flask-gunicorn, logging](https://medium.com/@trstringer/logging-flask-and-gunicorn-the-manageable-way-2e6f0b8beb2f)
 
 ## 참고
 - [gunicorn으로 flask 동시 요청 처리](https://winterj.me/flask-concurrency-test/)

@@ -69,4 +69,4 @@
 
 
 # 노드 관련 토픽
-- .mongoose를 이용한 mongoDB 사용법 ; https://velopert.com/594
+- mongoose를 이용한 mongoDB 사용법 ; https://velopert.com/594

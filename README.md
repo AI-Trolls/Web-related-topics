@@ -60,6 +60,7 @@
 - [flask-gunicorn 예제1](https://medium.com/ymedialabs-innovation/deploy-flask-app-with-nginx-using-gunicorn-and-supervisor-d7a93aa07c18)
 - [flask-gunicorn 예제2](http://egloos.zum.com/mcchae/v/11149241)
 - [flask-gunicorn, logging](https://medium.com/@trstringer/logging-flask-and-gunicorn-the-manageable-way-2e6f0b8beb2f)
+- gunicorn shared memory between instance 로 구글링 해보기
 
 ## 참고
 - [gunicorn으로 flask 동시 요청 처리](https://winterj.me/flask-concurrency-test/)

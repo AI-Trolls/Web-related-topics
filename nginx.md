@@ -179,7 +179,7 @@ server {
   - speed up options ; 4page, reset_timeout_connections on; 및 gzip 사용..
 - [생활 코딩 nginx / 걍 참고용](https://opentutorials.org/module/384/3463)
 - upstream 혹은 proxy 설정을 할 경우 소켓에 대한 얘기가 나오는데 참조하자
-  -[네트워크 소켓 개념](http://eastroot1590.tistory.com/entry/socket-socket%EC%9D%B4%EB%9E%80)
-  -[유닉스 소켓 vs TCP/IP host:port](https://serverfault.com/questions/195328/unix-socket-vs-tcp-ip-hostport)
+  -[네트워크 소켓 개념](http://eastroot1590.tistory.com/entry/socket-socket%EC%9D%B4%EB%9E%80)  
+  -[유닉스 소켓 vs TCP/IP host:port](https://serverfault.com/questions/195328/unix-socket-vs-tcp-ip-hostport)  
   -[유닉스 소켓](http://wiki.nex32.net/%EC%9A%A9%EC%96%B4/%EC%9C%A0%EB%8B%89%EC%8A%A4_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%86%8C%EC%BC%93)
 

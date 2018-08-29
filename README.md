@@ -62,6 +62,7 @@
     ```
     - [supervisor 문서](http://supervisord.org/introduction.html)
     - [쉽게 설명된 블로그글](https://jwkcp.github.io/2016/11/07/how-to-use-supervisor-in-one-minute/)
+    - [monitoring supervicor](https://serversforhackers.com/c/monitoring-processes-with-supervisord)
     - https://yenoss.github.io/2017/09/10/supervisor/
 - [flask-gunicorn 예제1](https://medium.com/ymedialabs-innovation/deploy-flask-app-with-nginx-using-gunicorn-and-supervisor-d7a93aa07c18)
 - [flask-gunicorn 예제2](http://egloos.zum.com/mcchae/v/11149241)

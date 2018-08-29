@@ -171,7 +171,7 @@ server {
 - [reverse-proxy-with-cache](https://www.nginx.com/resources/wiki/start/topics/examples/reverseproxycachingexample/)
 
 ## Upstream ?
-- Origin 서버
+- Origin 서버라고도 불림
   - 여러 대의 컴퓨터가 순차적으로 어떤 일을 할 때, 어떤 서비스를 받는 서버를 의미한다.
 - Nginx 자체는 Down Stream 서버라고 한다.
 - **upstream은 nginx의 내장모듈**로서, **부하 분산(로드 밸런싱) 및 속도 개선**에 쓰인다. 사용법도 매우 간단데스

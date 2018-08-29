@@ -68,6 +68,7 @@
         supervisorctl update #까지 하면 available 했던 프로그램이 프로세스 그룹에 추가됐다고 뜸
       ```
       - 이후에 supervisorctl을 치면, 실행중인 프로세스 목록이 보이고, 관리 명령어를 칠 수 있다(stop 프로세스명)
+      - [비슷한 글 - 좀 더 깔끔?](https://www.vultr.com/docs/installing-and-configuring-supervisor-on-ubuntu-16-04)
     - [쉽게 설명된 블로그글](https://yenoss.github.io/2017/09/10/supervisor/)
     - [쉽게 설명된 블로그글2](https://jwkcp.github.io/2016/11/07/how-to-use-supervisor-in-one-minute/)
 - [flask-gunicorn 예제1](https://medium.com/ymedialabs-innovation/deploy-flask-app-with-nginx-using-gunicorn-and-supervisor-d7a93aa07c18)

@@ -166,6 +166,10 @@ server {
       - if there is mached one -> pick that location
       - else, pick remembered one
 
+## Cache Server 설정법
+- [nginx-by-examples-caching](http://bitsandpieces.it/nginx-by-examples-caching)
+- [reverse-proxy-with-cache](https://www.nginx.com/resources/wiki/start/topics/examples/reverseproxycachingexample/)
+
 ## Upstream ?
 - Origin 서버
   - 여러 대의 컴퓨터가 순차적으로 어떤 일을 할 때, 어떤 서비스를 받는 서버를 의미한다.

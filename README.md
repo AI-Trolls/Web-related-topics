@@ -60,6 +60,7 @@
     ```
     pip install git+https://github.com/Supervisor/supervisor
     ```
+    - [supervisor 문서](http://supervisord.org/introduction.html)
     - https://yenoss.github.io/2017/09/10/supervisor/
 - [flask-gunicorn 예제1](https://medium.com/ymedialabs-innovation/deploy-flask-app-with-nginx-using-gunicorn-and-supervisor-d7a93aa07c18)
 - [flask-gunicorn 예제2](http://egloos.zum.com/mcchae/v/11149241)

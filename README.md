@@ -63,9 +63,13 @@
     - [*** pip으로 설치하는 경우 인스트럭션](http://supervisord.org/installing.html#installing-via-pip)
     - [사용법 문서](http://supervisord.org/running.html)
     - [conf에 프로그램 등록한 이후, 프로세스 추가 및 실행하는 법](https://serversforhackers.com/c/monitoring-processes-with-supervisord)
+      ```
+        supervisorctl reread #를 치면 available한 프로그램 이름이 뜨고
+        supervisorctl update #까지 하면 available 했던 프로그램이 프로세스 그룹에 추가됐다고 뜸
+      ```
+      - 이후에 supervisorctl을 치면, 실행중인 프로세스 목록이 보이고, 관리 명령어를 칠 수 있다(stop 프로세스명)
     - [쉽게 설명된 블로그글](https://yenoss.github.io/2017/09/10/supervisor/)
     - [쉽게 설명된 블로그글2](https://jwkcp.github.io/2016/11/07/how-to-use-supervisor-in-one-minute/)
-    - [monitoring supervicor](https://serversforhackers.com/c/monitoring-processes-with-supervisord)
 - [flask-gunicorn 예제1](https://medium.com/ymedialabs-innovation/deploy-flask-app-with-nginx-using-gunicorn-and-supervisor-d7a93aa07c18)
 - [flask-gunicorn 예제2](http://egloos.zum.com/mcchae/v/11149241)
 - [flask-gunicorn, logging](https://medium.com/@trstringer/logging-flask-and-gunicorn-the-manageable-way-2e6f0b8beb2f)

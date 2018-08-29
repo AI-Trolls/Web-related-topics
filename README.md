@@ -57,6 +57,9 @@
   - 필요에따라 지정한 만큼 인스턴스(workers)를 몇개 만들어 동시 서비스를 제공하게끔 동작한다.
   - [gunicorn](http://gunicorn.org)
   - [supervisor](http://supervisord.org/index.html) ; node의 forever같은 것
+    ```
+    pip install git+https://github.com/Supervisor/supervisor
+    ```
 - [flask-gunicorn 예제1](https://medium.com/ymedialabs-innovation/deploy-flask-app-with-nginx-using-gunicorn-and-supervisor-d7a93aa07c18)
 - [flask-gunicorn 예제2](http://egloos.zum.com/mcchae/v/11149241)
 - [flask-gunicorn, logging](https://medium.com/@trstringer/logging-flask-and-gunicorn-the-manageable-way-2e6f0b8beb2f)

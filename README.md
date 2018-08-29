@@ -60,6 +60,7 @@
     ```
     pip install git+https://github.com/Supervisor/supervisor
     ```
+    - [*** pip으로 설치하는 경우 인스트럭션](http://supervisord.org/installing.html#installing-via-pip)
     - [supervisor 문서](http://supervisord.org/introduction.html)
     - [쉽게 설명된 블로그글](https://jwkcp.github.io/2016/11/07/how-to-use-supervisor-in-one-minute/)
     - [monitoring supervicor](https://serversforhackers.com/c/monitoring-processes-with-supervisord)

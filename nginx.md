@@ -27,6 +27,8 @@ nginx 공홈의 beginner's guide위주로 정리
   (/etc/nginx/conf.d/default.conf 인 경우도 있음)
 - nginx는 기본적으로 /etc/nginx/nginx.conf를 기본 conf 파일로 로드하고,
   - 해당 파일 안에 보면 include /etc/nginx/conf.d/\*.conf 식으로 다른 conf를 포함하는 구조로 되어있음
+  - 따라서 /etc/nginx/nginx.conf를 확인하신 후, 
+    include 되는 디렉터리에 있는 default를 수정하는 식으로 하거나 \*.conf 파일을 따로 생성해서 작성합니다.
 - nginx가 설치되면 자동으로 생성됨
 
 ## Log 파일

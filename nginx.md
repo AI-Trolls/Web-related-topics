@@ -188,3 +188,4 @@ server {
   - [유닉스 소켓 vs TCP/IP host:port](https://serverfault.com/questions/195328/unix-socket-vs-tcp-ip-hostport)  
   - [유닉스 소켓](http://wiki.nex32.net/%EC%9A%A9%EC%96%B4/%EC%9C%A0%EB%8B%89%EC%8A%A4_%EB%8F%84%EB%A9%94%EC%9D%B8_%EC%86%8C%EC%BC%93)
 
+- [nginx 설정 한글 블로그](http://areumgury.blogspot.com/2016/08/nginx.html)

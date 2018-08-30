@@ -38,6 +38,7 @@ nginx 공홈의 beginner's guide위주로 정리
     ```
   - 따라서 /etc/nginx/nginx.conf를 확인하신 후, 
     include 되는 디렉터리에 있는 default 파일을 수정하시거나, \*.conf 파일을 따로 생성해서 작성합니다.
+  - [참고, site-available, conf.d 차이를 알고 싶을 때](https://serverfault.com/questions/527630/what-is-the-different-usages-for-sites-available-vs-the-conf-d-directory-for-ngi)
 
 ## Log 파일
 - 아마 /log/nginx에 보면

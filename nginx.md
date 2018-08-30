@@ -24,7 +24,8 @@ nginx 공홈의 beginner's guide위주로 정리
 
 ## Conf 파일
 - 보통 /etc/nginx/site-availables/default 파일을 수정함으로써 Nginx 세팅을 합니다</br>
-  (/etc/nginx/conf.d/default.conf 인 경우도 있음)
+  - /etc/nginx/conf.d/default.conf 인 경우도 있음)
+  - 버전에 따른 차이인 것 같습니다. 1.10.x 버전에는 전자, 1.15.x버전은 후자였음 (설치 리포지토리가 달라지면 다를 수)
 - nginx는 기본적으로 /etc/nginx/nginx.conf를 기본 conf 파일로 로드하고,
   - 해당 파일 안에 보면 include /etc/nginx/conf.d/\*.conf 식으로 다른 conf를 포함하는 구조로 되어있음
   - 따라서 /etc/nginx/nginx.conf를 확인하신 후, 

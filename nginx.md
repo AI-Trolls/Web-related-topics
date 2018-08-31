@@ -27,9 +27,10 @@ nginx 공홈의 beginner's guide위주로 정리
   - /etc/nginx/conf.d/default.conf 을 수정해서 세팅합니다.
   - 버전에 따른 차이인 것 같습니다. 1.10.x 버전에는 전자, 1.15.x버전은 후자였음 
   - 설치 리포지토리가 달라지면 다를 수
-- nginx는 기본적으로 /etc/nginx/nginx.conf(**http block 정의, http 서버의 전반적인 설정**)를 기본 conf 파일로 로드하고,
-  - 해당 파일 안에 보면 include /etc/nginx/conf.d/\*.conf 식으로 
-    별도의 conf(**server block에 관한 설정; virtual host 설정**)를 포함하는 구조로 되어있음
+- nginx는 기본적으로 /etc/nginx/nginx.conf를 기본 conf 파일로 로드하고,
+  - nginx.conf는 http block을 정의하고, http 서버의 전반적인 설정이 추가되어 있음
+  - nginx.conf 안에 보면 include /etc/nginx/conf.d/\*.conf 와 같이 
+    별도의 conf (**server block에 관한 설정; virtual host 설정**)를 포함하는 구조로 되어있음
     ```
     http {
       include /etc/nginx/conf.d/*.conf;

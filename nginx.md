@@ -30,7 +30,8 @@ nginx 공홈의 beginner's guide위주로 정리
 - nginx는 기본적으로 /etc/nginx/nginx.conf를 기본 conf 파일로 로드하고,
   - nginx.conf는 http block을 정의하고, http 서버의 전반적인 설정이 추가되어 있음
   - nginx.conf 안에 보면 include /etc/nginx/conf.d/\*.conf 와 같이 
-    별도의 conf (**server block에 관한 설정; virtual host 설정**)를 포함하는 구조로 되어있음
+    별도의 어쩌구.conf 를 포함하는 구조로 되어있음
+      - 이렇게 포함되는 conf에서는 server block(virtual host)에 관한 설정이 추가되어 있음
     ```
     http {
       include /etc/nginx/conf.d/*.conf;

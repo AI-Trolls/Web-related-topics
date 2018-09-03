@@ -62,21 +62,21 @@
     ```
     - [*** pip으로 설치하는 경우 인스트럭션](http://supervisord.org/installing.html#installing-via-pip)
     - [사용법 문서](http://supervisord.org/running.html)
-    - [conf에 프로그램 등록한 이후, 프로세스 추가 및 실행하는 법](https://serversforhackers.com/c/monitoring-processes-with-supervisord)
-    - [비슷한 글 - 좀 더 깔끔?](https://www.vultr.com/docs/installing-and-configuring-supervisor-on-ubuntu-16-04)
       ```
         supervisord # 명령만 실행시키면 다 되는 듯 하다. (-c 옵션으로 conf파일 위치 명시 가능)
       ```
       - supervisord 실행 이후에 conf가 바뀌는 경우엔 아래와 같이(?)
-        - supervisorctl은 supervisor에 명령을 보낼 수 있는 커멘드라인 툴이다.
+        - supervisorctl은 supervisor에 명령을 보낼 수 있는 커멘드라인 툴
       ```
         supervisorctl reread #를 치면 available한 프로그램 이름이 뜨고
         supervisorctl update #까지 하면 available 했던 프로그램이 프로세스 그룹에 추가됐다고 뜸
       ```
-
-    - [쉽게 설명된 블로그글](https://yenoss.github.io/2017/09/10/supervisor/)
-    - [쉽게 설명된 블로그글2](https://jwkcp.github.io/2016/11/07/how-to-use-supervisor-in-one-minute/)
-    - [docker와 같이 쓸 때 참고](https://blog.trifork.com/2014/03/11/using-supervisor-with-docker-to-manage-processes-supporting-image-inheritance/)
+    - 기본 문서를 보고 잘 안된다면 아래 문서 참조
+      - [conf에 프로그램 등록한 이후, 프로세스 추가 및 실행하는 법](https://serversforhackers.com/c/monitoring-processes-with-supervisord)
+      - [비슷한 글 - 좀 더 깔끔?](https://www.vultr.com/docs/installing-and-configuring-supervisor-on-ubuntu-16-04)
+      - [쉽게 설명된 블로그글](https://yenoss.github.io/2017/09/10/supervisor/)
+      - [쉽게 설명된 블로그글2](https://jwkcp.github.io/2016/11/07/how-to-use-supervisor-in-one-minute/)
+      - [docker와 같이 쓸 때 참고](https://blog.trifork.com/2014/03/11/using-supervisor-with-docker-to-manage-processes-supporting-image-inheritance/)
 - [flask-gunicorn 예제1](https://medium.com/ymedialabs-innovation/deploy-flask-app-with-nginx-using-gunicorn-and-supervisor-d7a93aa07c18)
 - [flask-gunicorn 예제2](http://egloos.zum.com/mcchae/v/11149241)
 - [flask-gunicorn, logging](https://medium.com/@trstringer/logging-flask-and-gunicorn-the-manageable-way-2e6f0b8beb2f)

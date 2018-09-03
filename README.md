@@ -57,21 +57,24 @@
   - 필요에따라 지정한 만큼 인스턴스(workers)를 몇개 만들어 동시 서비스를 제공하게끔 동작한다.
   - [gunicorn](http://gunicorn.org)
   - [supervisor](http://supervisord.org/index.html) ; node의 forever같은 것
+    - python2만 정식 지원이지만
+    - python3도 dev버전을 통해 쓸 수 있음(아래 설치법)
     ```
     pip install git+https://github.com/Supervisor/supervisor
     ```
     - [*** pip으로 설치하는 경우 인스트럭션](http://supervisord.org/installing.html#installing-via-pip)
     - [사용법 문서](http://supervisord.org/running.html)
-      ```
-        supervisord # 명령만 실행시키면 다 되는 듯 하다. (-c 옵션으로 conf파일 위치 명시 가능)
-      ```
+      - 간단히 정리하면, pip으로 설치 이후에
+        1. /etc/supervisord.conf를 만들고(위 링크 참조) 
+        2. 내가 실행하고 싶은 프로그램 설정을 conf에 추가
+        3. 이후에 supervisord(-c옵션)를 실행하는 것으로 충분하다. (pip으로 설치한 경우에 얘기)
       - supervisord 실행 이후에 conf가 바뀌는 경우엔 아래와 같이(?)
         - supervisorctl은 supervisor에 명령을 보낼 수 있는 커멘드라인 툴
       ```
         supervisorctl reread #를 치면 available한 프로그램 이름이 뜨고
         supervisorctl update #까지 하면 available 했던 프로그램이 프로세스 그룹에 추가됐다고 뜸
       ```
-    - 기본 문서를 보고 잘 안된다면 아래 문서 참조
+    - 기본 문서를 보고 잘 안된다면 아래 문서 참조 (but apt-get install 방식으로 깐 경우 살짝 느낌이 다름..)
       - [conf에 프로그램 등록한 이후, 프로세스 추가 및 실행하는 법](https://serversforhackers.com/c/monitoring-processes-with-supervisord)
       - [비슷한 글 - 좀 더 깔끔?](https://www.vultr.com/docs/installing-and-configuring-supervisor-on-ubuntu-16-04)
       - [쉽게 설명된 블로그글](https://yenoss.github.io/2017/09/10/supervisor/)

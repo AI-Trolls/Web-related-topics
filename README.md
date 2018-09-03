@@ -74,7 +74,7 @@
         supervisorctl reread #를 치면 available한 프로그램 이름이 뜨고
         supervisorctl update #까지 하면 available 했던 프로그램이 프로세스 그룹에 추가됐다고 뜸
       ```
-    - 기본 문서를 보고 잘 안된다면 아래 문서 참조 (but apt-get install 방식으로 깐 경우 살짝 느낌이 다름..)
+    - 기본 문서를 보고 잘 안된다면 아래 문서 참조 (apt-get install 방식으로 깐 경우 conf가 자동 생성되는 듯)
       - [conf에 프로그램 등록한 이후, 프로세스 추가 및 실행하는 법](https://serversforhackers.com/c/monitoring-processes-with-supervisord)
       - [비슷한 글 - 좀 더 깔끔?](https://www.vultr.com/docs/installing-and-configuring-supervisor-on-ubuntu-16-04)
       - [쉽게 설명된 블로그글](https://yenoss.github.io/2017/09/10/supervisor/)

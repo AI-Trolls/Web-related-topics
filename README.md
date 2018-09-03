@@ -66,7 +66,16 @@
     - [사용법 문서](http://supervisord.org/running.html)
       - 간단히 정리하면, pip으로 설치 이후에
         1. /etc/supervisord.conf를 만들고(위 링크 참조) 
-        2. 내가 실행하고 싶은 프로그램 설정을 conf에 추가
+        2. 내가 실행하고 싶은 프로그램 설정을 supervisord.conf에 추가 (concat)
+          ```
+          [program:myapp]
+          directory=/root/myapp
+          command=gunicorn app:app -b 0.0.0.0:22222
+          autostart=true
+          autorestart=true
+          stderr_logfile=/root/myapp/err.log
+          stdout_logfile=/root/myapp/out.log
+          ```
         3. 이후에 supervisord(-c옵션)를 실행하는 것으로 충분하다. (pip으로 설치한 경우에 얘기)
       - supervisord 실행 이후에 conf가 바뀌는 경우엔 아래와 같이(?)
         - supervisorctl은 supervisor에 명령을 보낼 수 있는 커멘드라인 툴

@@ -62,7 +62,7 @@
     ```
     pip install git+https://github.com/Supervisor/supervisor
     ```
-    - [*** pip으로 설치하는 경우 인스트럭션](http://supervisord.org/installing.html#installing-via-pip)
+    - [pip으로 설치하는 경우 인스트럭션](http://supervisord.org/installing.html#installing-via-pip)
     - [사용법 문서](http://supervisord.org/running.html)
       - 간단히 정리하면, pip으로 설치 이후에
         1. /etc/supervisord.conf를 만들고(위 링크 참조) 

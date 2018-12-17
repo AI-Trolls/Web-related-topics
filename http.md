@@ -97,6 +97,32 @@ http관련 기본 지식 정리
   <html>
     ...
   ```
+- 참고로, http는 stateless한 프로토콜이다.
+  - 첫번째 request와 그 다음번째 request는 서버입장에선 전혀 연관이 없는 별도의 요청
+  - 따라서 상태 유지에 관한 기능(로그인)이 필요하다면, cookie라는 걸 써야함. (이후 설명)
+- http method에 대하여,
+  - GET: 리소스 획득의 의미(URI로 지정된 리소스를 가져옴)
+    ```
+    GET /index.html HTTP /1.1
+    HOST: zum.com
+    If-Modified-Since: Thu, 12 Jul 2018 05:30:0 GMT
+    ------------------------------------------------- 해당 시간 이후에 갱신된 경우에만 응답 or 304 Not Modified
+    ```
+  - POST: 엔티티 전송
+    ```
+    POST /submit.cgi HTTP /1.1
+    Host: zum.com
+    Content-Length: 1500
+    ```
+  - PUT: 파일 전송, 요청에 포함된 엔티티를 요청 URI로 지정한 곳에 보존하도록 요청
+    ```
+    POST /example.html HTTP /1.1
+    Host: www.zum.com
+    Content-type: text/html
+    Content-Length: 1500
+    ------------------------------------------------ 서버 상에 이미 example.html이 있다면, 204 No Content 응답
+    ```
+  - 
 ## <a name='3'>HTTP Message</a>
 
 

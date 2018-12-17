@@ -3,7 +3,7 @@
 웹서버다룰 때 자주 등장하는 개념 및 flask, node에 관한 정보, 배포시 알아둬야할 점들 정리
 
 ## HTTP basic
-- [링크]()
+- [링크](https://github.com/AI-Trolls/Web-related-topics/blob/master/http.md)
 
 ## Web Server (주의; 웹서버와 웹애플리케이션서버는 다른 개념임)
 - 클라이언트로부터 요청된 웹 리소스을 서빙해주는 소프트웨어

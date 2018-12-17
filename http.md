@@ -69,8 +69,34 @@ http관련 기본 지식 정리
     - uid=1 -> 쿼리 문자열
     - #ch1 -> 서브 리소스를 가리키기 위한 fragment identifier
 ## <a name='2'>HTTP</a>
-
-
+- Client, Server
+- 클라이언트는 리소스를 요청하는 쪽
+- 서버는 리소스를 제공하는 쪽
+- 어느 한쪽은 반드시 클라이언트, 다른쪽은 서버
+- Request, Response
+  - Request Msg는 메소드, URI, 프로토콜버전, 옵션 리퀘스트 헤더필드 및 엔터티로 구성
+  ```
+  ///////////////////////////////////////////////이하 메소드/URI/프로토콜버전
+  POST /form/entry HTTP/1.1
+  ///////////////////////////////////////////////이하 리퀘스트헤더필드
+  Connection: keep-alive
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 16
+  ///////////////////////////////////////////////이하 엔터티
+  name=ueno&age=37
+  ```
+  - Response Msg는, 서버의 HTTP버전, 상태코드와 설명, 헤더필드(리스폰스발생 시간, 리스폰스 길이, 등), 바디로 구성
+  ```
+  ////////////////////////////////////이하 버전, 상태코드, 
+  HTTP /1.1 200 OK
+  ////////////////////////////////////이하 헤더필드
+  Date: Tue, 10 Jul 2018 10:45:15 GMT
+  Content-Length: 333
+  Content-Type: text/html
+  /////////////////////////////////////이하 바디
+  <html>
+    ...
+  ```
 ## <a name='3'>HTTP Message</a>
 
 

@@ -33,7 +33,7 @@ http관련 기본 지식 정리
     2. TCP 레이어(transport)에서는 HTTP msg를 조각 내어 조각에 대한 번호와 포트 번호를 붙여 내려보냄
     3. Network 레이어에서는 수신지의 MAC 주소를 추가해서 link 레이어에 내려보냄
     4. 수신측에선 반대의 순서로 메시지를 받음
-- **Internet Protocol(IP)**는 배송을 담당
+- **Internet Protocol;IP**는 배송을 담당
   - 네트워크 레이어
   - 패킷 하나하나를 상대쪽으로 전달
   - 이 때, IP addr과 MAC addr이 필요

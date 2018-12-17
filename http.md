@@ -14,7 +14,7 @@ http관련 기본 지식 정리
 ## <a name='1'>Web, Network</a>
 - **HTTP(HyperText Transfer Protocol)**
   - protocol? 통신을 시작, 수행, 종료 하는 방법을 정리한 것
-- 웹 문서 전송 프로토콜인 HTTP는 발전이 더딤(현재 1.x버전), 곧 차세대 프로토콜 HTTP/2.0이 등장할 것임
+- 웹 문서 전송 프로토콜인 HTTP는 발전이 더딤(현재 1.1버전), 곧 차세대 프로토콜 HTTP/2.0이 등장할 것임
 - **HTTP**는 **TCP/IP 프로토콜을 기반**으로 동작
 - TCP/IP는 **계층으로 구성**됨
   - Application Layer

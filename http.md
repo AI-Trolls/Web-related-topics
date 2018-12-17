@@ -19,14 +19,20 @@ http관련 기본 지식 정리
 - TCP/IP는 계층으로 구성됨
   - Application Layer
     - 애플리케이션에서 직접적으로 사용하는 통신의 흐름을 구현
-    - HTTP, FTP, DNS 애플리케이션들이 있음
+    - HTTP, FTP, DNS 애플리케이션 등이 있음
   - Transport Layer 
     - 애플리케이션 레이어에 접속되어 있는 2대의 엔드포인트(컴퓨터) 사이의 데이터 흐름을 제공
     - TCP, UDP 프로토콜이 있음
   - Network Layer(Internet Layer)
     - 네트워크 상에서 패킷의 이동을 담당(어떻게 전달이 될지, 길은 어떻게 결정하고..)
   - Link Layer ; 하드웨어에 가까운 쪽의 흐름을 담당 (driver, Network Interface Card, ...)
-  
+- TCP/IP 통신의 흐름은 대략적으로 다음과 같음
+  - 송신 측은 애플리케이션 레이어에서 밑으로 내려가고
+  - 수신 측은 반대로 메시지가 밑에서 올라옴
+  1. HTTP의 경우 클라이언트 쪽에서 먼저 HTTP request를 내려보냄
+  2. TCP 레이어(transport)에서는 HTTP msg를 조각 내어 조각에 대한 번호와 포트 번호를 붙여 내려보냄
+  3. Network 레이어에서는 수신지의 MAC 주소를 추가해서 link 레이어에 내려보냄
+  4. 수신측에선 반대의 순서로 메시지를 받음
 ## <a name='2'>HTTP</a>
 
 

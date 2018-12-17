@@ -37,9 +37,9 @@ http관련 기본 지식 정리
   - 네트워크 레이어
   - 패킷 하나하나를 상대쪽으로 전달
   - 이 때, IP addr과 MAC addr이 필요
-  - IP 주소는 각 노드에 (일시적or고정적)부여된 주소, MAC 주소는 각 NIC(network interface card)에 할당된 고유 주소
+  - **IP 주소**는 각 노드에 (일시적or고정적)부여된 주소, **MAC 주소는 각 NIC**(network interface card)에 할당된 고유 주소
   - IP 주소는 MAC 주소와 맺어지며, 전자는 변경 가능하지만 후자는 그렇지 않다.
-  - 실제 통신은 ARP(Address Resolution Protocol)에 의해서 이루어지는데,
+  - 실제 통신은 **ARP**(Address Resolution Protocol)에 의해서 이루어지는데,
     - 보통은 여러 노드를 거쳐서 패킷이 도착하게 되고,
     - 이 때, 어떤 노드를 기준으로 다음 노드를 찾아갈 때 MAC 주소를 사용해 당장의 다음 목적지를 정함
     - ARP는 수신지의 IP 주소를 바탕으로 바로 다음 노드의 MAC 주소를 알려줌

@@ -54,7 +54,12 @@ http관련 기본 지식 정리
       2. 수신측에서는 'SYN/ACK' 플래그로 송신측에 접속하면서 패킷을 수신했다고 표시
       3. 마지막에 송신측이 'ACK' 플래그를 보내면서 패킷 교환 완료를 전함
 - DNS는 application layer의 애플리케이션이고
-  - 도메인명을 IP주소로 바꿔주는 서비스를 담당
+  - 도메인명을 IP주소로 바꿔주는 서비스를 담당 
+- **URI**란?
+  - Uniform Resource Identifier
+  - 리소스란 식별 가능한 모든 것(문서, 이미지, 동영상, ...)
+  - 리소스에 이름 붙이는 [방법](http://www.iana.org/assignments/uri-schemes)
+  - URL은 locator, 리소스의 장소(네트워크 상의 위치)를 나타내는 개념이며 URI의 subset이다
 ## <a name='2'>HTTP</a>
 
 

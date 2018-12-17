@@ -60,6 +60,14 @@ http관련 기본 지식 정리
   - 리소스란 식별 가능한 모든 것(문서, 이미지, 동영상, ...)
   - 리소스에 이름 붙이는 [방법](http://www.iana.org/assignments/uri-schemes)
   - URL은 locator, 리소스의 장소(네트워크 상의 위치)를 나타내는 개념이며 URI의 subset이다
+  - ex) http://user:pass@www.example.kr:80/dir/index.html?uid=1#ch1
+    - http -> 리소스를 얻기 위한 프로토콜, 스키마
+    - user:pass -> 자격정보
+    - www~kr -> 서버주소
+    - 80 -> 포트
+    - /dir/index.html -> 파일 경로
+    - uid=1 -> 쿼리 문자열
+    - #ch1 -> 서브 리소스를 가리키기 위한 fragment identifier
 ## <a name='2'>HTTP</a>
 
 

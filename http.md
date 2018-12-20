@@ -100,7 +100,8 @@ http관련 기본 지식 정리
 - 참고로, http는 stateless한 프로토콜이다.
   - 첫번째 request와 그 다음번째 request는 서버입장에선 전혀 연관이 없는 별도의 요청
   - 따라서 상태 유지에 관한 기능(로그인)이 필요하다면, cookie라는 걸 써야함. (이후 설명)
-- http method에 대하여, [mozila reference](https://developer.mozilla.org/ko/docs/Web/HTTP/Methods/GET)
+- HTTP METHOD에 대하여, [mozila reference](https://developer.mozilla.org/ko/docs/Web/HTTP/Methods/GET)
+  - http method? 리소스에 어떤 행동을 하길 원하는지 정의
   - GET: 리소스 획득의 의미(URI로 지정된 리소스를 가져옴)
     ```
     GET /index.html HTTP /1.1
@@ -150,8 +151,23 @@ http관련 기본 지식 정리
   - CONNECT: 프록시에 터널 접속 확립 요청
     - TCP 통신을 터널링시키기 위해 사용
     - SSL과 TLS 등의 프로토콜로 암호화 된것을 터널링 하기 위해 사용된다고한다 (뭔말?)
-    - 그냥 요청하면 프록시 서버에서 막히고 프록시 서버가 응답을 해버리는 경우,
-      - 프록시를 뚫고 뒷편에 있는 서버까지 (직접?) 도달하기 위한 수단
+    ```
+    CONNECT proxy.zum.com:8080 HTTP /1.1
+    Host: proxy.zum.com
+    ------------------------------------------------- 이하 응답(프록시로부터)
+    HTTP /1.1 200 OK
+    ------------------------------------------------- 이후에 터널링 시작
+    ```
+- Persistent Connection을 통한 오버헤드 줄이기
+  - HTTP 초기 버전
+    - HTTP 통신 한번에 매번 TCP 연결 맺고 끊음
+    - TCP 커넥션 연결(syn,syn/ack,ack) -> HTTP 요청/응답 -> TCP 커넥션 종료(FIN/ACK x 2) [참고](http://hyeonstorage.tistory.com/287)  
+  - 하나의 페이지만 해도 여러 리소스(이미지 같은)들이 있기 때문에 connection을 지속할 필요가 있음
+  - 어느 한쪽이 명시적으로 연결을 종료하지 않는 이상 TCP connection 유지
+    - TCP 커넥션 연결 -> HTTP 요청/응답, HTTP 요청/응답, HTTP 요청/응답, ... -> TCP 커넥션 종료
+  - Pipelining
+    - 여러 리소스 각각에 대해서 응답을 기다린 후 요청을 보낼 필요 없이
+    - 비동기적으로(?) 요청부터 다 보내버리고 이후에 응답들을 받음
 ## <a name='3'>HTTP Message</a>
 
 

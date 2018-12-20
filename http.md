@@ -158,16 +158,18 @@ http관련 기본 지식 정리
     HTTP /1.1 200 OK
     ------------------------------------------------- 이후에 터널링 시작
     ```
-- Persistent Connection을 통한 오버헤드 줄이기
+- **Persistent Connection**을 통한 오버헤드 줄이기
   - HTTP 초기 버전
     - HTTP 통신 한번에 매번 TCP 연결 맺고 끊음
-    - TCP 커넥션 연결(syn,syn/ack,ack) -> HTTP 요청/응답 -> TCP 커넥션 종료(FIN/ACK x 2) [참고](http://hyeonstorage.tistory.com/287)  
+    - TCP 커넥션 연결(syn,syn/ack,ack) -> HTTP 요청/응답 -> TCP 커넥션 종료(FIN/ACK x 2번) [참고](http://hyeonstorage.tistory.com/287)  
   - 하나의 페이지만 해도 여러 리소스(이미지 같은)들이 있기 때문에 connection을 지속할 필요가 있음
   - 어느 한쪽이 명시적으로 연결을 종료하지 않는 이상 TCP connection 유지
-    - TCP 커넥션 연결 -> HTTP 요청/응답, HTTP 요청/응답, HTTP 요청/응답, ... -> TCP 커넥션 종료
+    - TCP 커넥션 연결 -> [HTTP 요청/응답, HTTP 요청/응답, HTTP 요청/응답, ...] -> TCP 커넥션 종료
   - Pipelining
     - 여러 리소스 각각에 대해서 응답을 기다린 후 요청을 보낼 필요 없이
     - 비동기적으로(?) 요청부터 다 보내버리고 이후에 응답들을 받음
+- 상태관리: **Cookie**
+  - 
 ## <a name='3'>HTTP Message</a>
 
 

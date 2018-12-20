@@ -100,7 +100,7 @@ http관련 기본 지식 정리
 - 참고로, http는 stateless한 프로토콜이다.
   - 첫번째 request와 그 다음번째 request는 서버입장에선 전혀 연관이 없는 별도의 요청
   - 따라서 상태 유지에 관한 기능(로그인)이 필요하다면, cookie라는 걸 써야함. (이후 설명)
-- http method에 대하여,
+- http method에 대하여, [mozila reference](https://developer.mozilla.org/ko/docs/Web/HTTP/Methods/GET)
   - GET: 리소스 획득의 의미(URI로 지정된 리소스를 가져옴)
     ```
     GET /index.html HTTP /1.1
@@ -116,13 +116,37 @@ http관련 기본 지식 정리
     ```
   - PUT: 파일 전송, 요청에 포함된 엔티티를 요청 URI로 지정한 곳에 보존하도록 요청
     ```
-    POST /example.html HTTP /1.1
+    PUT /example.html HTTP /1.1
     Host: www.zum.com
     Content-type: text/html
     Content-Length: 1500
     ------------------------------------------------ 서버 상에 이미 example.html이 있다면, 204 No Content 응답
     ```
-  - 
+  - HEAD: rsp 메시지 헤더 취득, GET과 같은 기능이지만 msg body가 없음. (URI 유효성 및 리소스 갱신 시간 확인)
+    ```
+    HEAD /index.html
+    Host: www.zum.com
+    ```
+  - DELETE: 파일 삭제 용도(PUT과 반대), 지정된 리소스 삭제 요청
+    - 다만, PUT과 함께, 인증 기능이 없는 상황에선 사용 안됨
+    ```
+    DELETE /example.html HTTP /1.1
+    Host: ~
+    ------------------------------------------------ 상태코드 204 No Content 리턴(example.html은 삭제되어있다)
+    ```
+  - OPTIONS: URI로 지정한 리소스가 제공하고 있는 메소드 문의
+    ```
+    OPTIONS * HTTP /1.1
+    Host: ~
+    ------------------------------------------------ 이하 응답
+    HTTP /1.1 200 OK
+    Allow: GET, POST, HEAD, OPTIONS
+    ```
+  - TRACE: Web 서버에 접속해서 자신에게 통신을 되돌려 받는 loop-back 발생
+    - "Max-Forwards" 필드를 헤더 필드에 수치를 포함시켜 서버 통과시 -1
+    - 수치가 0 된 곳에서 200 OK rsp msg
+    - 프록시 등을 중계해서 origin 서버에 접속할 때 그 동작 확인을 위해 쓰임
+    - Cross Site Tracing 공격과 같은 문제로 거의 사용 안한다고 함. 
 ## <a name='3'>HTTP Message</a>
 
 

@@ -101,7 +101,7 @@
 - pending request, backlog, queue
   - [backlog](https://stackoverflow.com/questions/45236384/reducing-flask-gunicorn-request-queue)
   - [backlog-docs](http://docs.gunicorn.org/en/stable/settings.html#backlog)
-
+- [faq](http://docs.gunicorn.org/en/latest/faq.html)
 ## 참고
 - [gunicorn으로 flask 동시 요청 처리](https://winterj.me/flask-concurrency-test/)
 - [uwsgi를 통한 python3, nginx 배포](https://mango-tree.github.io/2017/03/27/uWSGI-%EC%99%80-Python3%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-Nginx%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0/)

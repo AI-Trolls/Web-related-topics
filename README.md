@@ -105,7 +105,7 @@
 ## Flask + Gunicorn + Docker(compose)
 - 중간에 supervisord 를 안써도 된다. 왜냐하면 docker-compose의 기능으로 restart 옵션이 있기 때문!
   - 괜히 쓸데 없는 과정이 중간에 끼어 드는 것
-  - [그렇게 쓰라고 만든게 아니다](https://stackoverflow.com/questions/30034813/best-way-to-manage-docker-containers-with-supervisord)
+  - [supervisord + Docker 같이 쓰지마라](https://stackoverflow.com/questions/30034813/best-way-to-manage-docker-containers-with-supervisord)
 - [auto restart on failure](https://stackoverflow.com/questions/40109247/restart-docker-containers-when-they-crash-automatically)
 - [restart option detail](https://blog.codeship.com/ensuring-containers-are-always-running-with-dockers-restart-policy/)
 ## 참고

@@ -101,6 +101,13 @@
   - [backlog](https://stackoverflow.com/questions/45236384/reducing-flask-gunicorn-request-queue)
   - [backlog-docs](http://docs.gunicorn.org/en/stable/settings.html#backlog)
 - [faq](http://docs.gunicorn.org/en/latest/faq.html)
+
+## Flask + Gunicorn + Docker(compose)
+- 중간에 supervisord 를 안써도 된다. 왜냐하면 docker-compose의 기능으로 restart 옵션이 있기 때문!
+  - 괜히 쓸데 없는 과정이 중간에 끼어 드는 것
+  - [그렇게 쓰라고 만든게 아니다](https://stackoverflow.com/questions/30034813/best-way-to-manage-docker-containers-with-supervisord)
+- [auto restart on failure](https://stackoverflow.com/questions/40109247/restart-docker-containers-when-they-crash-automatically)
+- [restart option detail](https://blog.codeship.com/ensuring-containers-are-always-running-with-dockers-restart-policy/)
 ## 참고
 - [gunicorn으로 flask 동시 요청 처리](https://winterj.me/flask-concurrency-test/)
 - [uwsgi를 통한 python3, nginx 배포](https://mango-tree.github.io/2017/03/27/uWSGI-%EC%99%80-Python3%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-Nginx%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0/)

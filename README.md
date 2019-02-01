@@ -83,8 +83,10 @@
       - supervisord 실행 이후에 conf가 바뀌는 경우엔 아래와 같이(?)
         - supervisorctl은 supervisor에 명령을 보낼 수 있는 커멘드라인 툴
         ```
-        supervisorctl reread #를 치면 available한 프로그램 이름이 뜨고
-        supervisorctl update #까지 하면 available 했던 프로그램이 프로세스 그룹에 추가됐다고 뜸
+        일단 supervisorctl을 치면 현재 실행중인? 리스트를 볼 수 있음
+        help : 도움말, status: 현재 실행중인 애들
+        update: 코드 업데이트 반영 (update 이름)
+        http://supervisord.org/running.html#supervisorctl-actions 참고
         ```
     - docker와 함께 쓸 경우 주의해야 할점은, **supervisor를 foreground에서 실행**할 필요가 있을 수 있다는 것
       - **해당 경우엔,** supervisord.conf의 nodaemon옵션을 true로 바꿔준다. (start in foreground if true)

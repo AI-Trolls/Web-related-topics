@@ -13,7 +13,12 @@ nginx 공홈의 beginner's guide위주로 정리
   - 필요에 따라 fork를 써서 몇 개의 process 사용 가능
 - Main Event Loop라는 놈이 OS의 socket으로 부터 읽을 수 있는 Data를 기다리고 있음
 
-## 설치는 알아서
+## 설치
+- 
+  ```bash
+  sudo apt-get update
+  sudo apt-get install nginx
+  ```
 
 ## Command
 - stop, quit, reload, reopen 등이 있음
